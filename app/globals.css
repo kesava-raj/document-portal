@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-paper: #F4F1E9;
+  --color-surface: #FFFFFF;
+  --color-surface2: #FBFAF5;
+  --color-ink: #1B1A16;
+  --color-ink2: #52504A;
+  --color-ink3: #8E8C82;
+  --color-ink4: #B6B4A8;
+  --color-line: #E5E1D5;
+  --color-line2: #D7D2C3;
+  --color-accent: #0E6E56;
+  --color-accent-d: #0A5544;
+  --color-accent-soft: #E2F0EA;
+  --color-accent-line: #BEDFD3;
+  --color-amber: #9A6312;
+  --color-amber-soft: #F7ECD7;
+  --color-red: #9A3328;
+  --color-red-soft: #F6E3DF;
+
+  --font-serif: var(--font-newsreader);
+  --font-sans: var(--font-hanken-grotesk);
+  --font-mono: var(--font-ibm-plex-mono);
+
+  --shadow-sh1: 0 1px 2px rgba(27,26,22,.05);
+  --shadow-sh2: 0 4px 18px rgba(27,26,22,.08);
+  --shadow-sh3: 0 18px 48px rgba(27,26,22,.14);
+
+  --radius-sm: 10px;
+  --radius-md: 14px;
+}
+
+@layer utilities {
+  .texture-bg {
+    background-image: radial-gradient(var(--color-line2) 0.5px, transparent 0.5px);
+    background-size: 22px 22px;
+    background-repeat: repeat;
+  }
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+}
+
+.fade-in {
+  animation: fadeIn 0.45s ease forwards;
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
